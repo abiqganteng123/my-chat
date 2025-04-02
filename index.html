@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NgobrolAsik - Teman Diskusi Realtime</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="logo floating">
+                <i class="fas fa-comments"></i>
+                <span>NgobrolAsik</span>
+            </div>
+            <h1>Temukan Teman Diskusi dari Seluruh Dunia</h1>
+            <p class="tagline">Bergabunglah dengan komunitas kami dan nikmati obrolan realtime dengan orang-orang menarik dari berbagai belahan dunia.</p>
+            
+            <form class="join-form" id="joinForm">
+                <div class="form-group">
+                    <label for="username">Nama Pengguna</label>
+                    <input type="text" id="username" placeholder="Masukkan nama panggilan Anda" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="country">Negara</label>
+                    <select id="country" required>
+                        <option value="" disabled selected>Pilih negara Anda</option>
+                        <option value="ID">Indonesia</option>
+                        <option value="MY">Malaysia</option>
+                        <option value="SG">Singapura</option>
+                        <option value="US">Amerika Serikat</option>
+                        <option value="GB">Inggris</option>
+                        <option value="JP">Jepang</option>
+                        <option value="KR">Korea Selatan</option>
+                        <option value="other">Lainnya</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="room">Ruang Diskusi</label>
+                    <select id="room" required>
+                        <option value="" disabled selected>Pilih ruang diskusi</option>
+                        <option value="general">Umum</option>
+                        <option value="technology">Teknologi</option>
+                        <option value="games">Game</option>
+                        <option value="movies">Film & TV</option>
+                        <option value="music">Musik</option>
+                        <option value="sports">Olahraga</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn pulse">
+                    <i class="fas fa-sign-in-alt"></i> Mulai Ngobrol
+                </button>
+            </form>
+        </div>
+    </section>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
